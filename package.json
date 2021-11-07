@@ -1,0 +1,29 @@
+{
+  "name": "ton-sender",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ex3ndr/ton-sender.git",
+  "author": "Steve Korshakov <steve@korshakov.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -fr build && tsc",
+    "start": "node ./build/index.js",
+    "dev": "yarn build && yarn start"
+  },
+  "dependencies": {
+    "@openland/patterns": "^0.0.2",
+    "@types/bn.js": "^5.1.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.6",
+    "bn.js": "^5.2.0",
+    "chalk": "^4.1.2",
+    "date-fns": "^2.25.0",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "prom-client": "^14.0.0",
+    "ton": "^4.24.1",
+    "ton-contracts": "^1.8.0",
+    "ton-crypto": "^1.5.1",
+    "typescript": "^4.4.4"
+  }
+}
