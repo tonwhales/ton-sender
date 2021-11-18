@@ -2,6 +2,7 @@ import { TonClient } from 'ton';
 import chalk from 'chalk';
 import { format } from 'date-fns';
 import express from 'express';
+import { createBackoff } from 'teslabot';
 
 //
 // API Endpoints
@@ -33,6 +34,8 @@ function warn(src: any) {
 // Operation
 //
 
+const backoff = createBackoff({ onError: (e) => warn(e) });
+
 async function sendMessage(message: Buffer) {
     log('Received message to send');
     await new Promise<void>(async (resolve, reject) => {
@@ -48,6 +51,10 @@ async function sendMessage(message: Buffer) {
                     if (++fails === clients.length) {
                         reject(e); // Reject when everything failed
                     }
+                    backoff(async () => {
+                        await c.sendFile(message);
+                        log('Successfuly sent to ' + c.parameters.endpoint);
+                    });
                 }
             })()
         }

@@ -21,6 +21,7 @@
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
     "prom-client": "^14.0.0",
+    "teslabot": "^1.2.1",
     "ton": "^4.24.1",
     "ton-contracts": "^1.8.0",
     "ton-crypto": "^1.5.1",

@@ -573,6 +573,11 @@ tdigest@^0.1.1:
   dependencies:
     bintrees "1.0.1"
 
+teslabot@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/teslabot/-/teslabot-1.2.1.tgz#39f6536c5fe92849f438885a3eb3fcc0a6f1a8ac"
+  integrity sha512-AwFeiJwJYQeKUii9KFdsNm0WVGtCBJGlmwbPNRlgU/hLbMmkFDSdaZrm2e4W1MJ1dB34tBW8ysjGb4uxY5vdmQ==
+
 toidentifier@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
