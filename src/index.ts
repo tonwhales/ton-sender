@@ -9,7 +9,7 @@ import express from 'express';
 
 const endpoints = [
     'https://ton-api.tonwhales.com/jsonRPC',
-    'https://ton.korshakov.com/jsonRPC',
+    // 'https://ton.korshakov.com/jsonRPC',
     'https://toncenter.com/api/v2/jsonRPC',
     'https://scalable-api.tonwhales.com/jsonRPC'
 ];
