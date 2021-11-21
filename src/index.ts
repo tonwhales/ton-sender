@@ -51,7 +51,13 @@ async function sendMessage(message: Buffer) {
                     if (++fails === clients.length) {
                         reject(e); // Reject when everything failed
                     }
+                    let attempt = 0;
                     backoff(async () => {
+                        attempt++;
+                        if (attempt > 50) {
+                            warn('Ignored due too many errors');
+                            return;
+                        }
                         await c.sendFile(message);
                         log('Successfuly sent to ' + c.parameters.endpoint);
                     });
