@@ -77,6 +77,10 @@ async function sendMessage(message: Buffer) {
     // Start web server
     //
     log('Starting HTTP server...');
+    let port = 3000;
+    if (process.env.PORT) {
+        port = parseInt(process.env.PORT, 10);
+    }
     const app = express();
     app.get('/', (req, res) => {
         res.send('Welcome to server!')
@@ -96,6 +100,6 @@ async function sendMessage(message: Buffer) {
             res.status(500).send()
         }
     });
-    await new Promise<void>((resolve) => app.listen(3000, resolve));
-    log('Server ready');
+    await new Promise<void>((resolve) => app.listen(port, resolve));
+    log('Server ready on ' + port);
 })();
