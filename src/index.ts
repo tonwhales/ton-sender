@@ -10,6 +10,8 @@ import { createBackoff } from 'teslabot';
 
 const endpoints = [
     'https://ton-api.tonwhales.com/jsonRPC',
+    'https://node-1.servers.tonwhales.com/jsonRPC',
+    'https://node-2.servers.tonwhales.com/jsonRPC',
     // 'https://ton.korshakov.com/jsonRPC',
     'https://toncenter.com/api/v2/jsonRPC',
     'https://scalable-api.tonwhales.com/jsonRPC'
